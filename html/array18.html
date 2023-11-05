@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+     
+     void main(){
+        int arr[5], i;
+        for (i = 0; i < 5; i++)
+        {
+            printf("Enter Value  %d\n", i+1);
+            scanf("%d", &arr[i]);
+        }
+        
+        for (i = 0; i < 5; i++)
+        {
+            if(arr[i] < arr[i-1] && arr[i] < arr[i+1])
+                printf("%d is local minimal\n", arr[i]);
+        }
+            
+        return 0;
+    }
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+    Enter Value  1
+    99
+    Enter Value  2
+    88
+    Enter Value  3
+    60
+    Enter Value  4
+    4
+    Enter Value  5
+    82
+    
+    4 is local minimal
+    
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

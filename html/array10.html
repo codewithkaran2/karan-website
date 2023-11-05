@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1> </h1>
+
+<pre class="input">
+    
+    #include&#60;stdio.h&#62;
+    #include&#60;conio.h&#62;
+    
+    void main(){
+        int arr[5], i, sum = 0;
+        for (i = 0; i < 5; i++)
+        {
+            printf("Enter Value of position %d\n", i+1);
+            scanf("%d", &arr[i]);
+        }
+        for (i = 0; i < 5; i++)
+        {
+            sum += arr[i];
+        }
+        printf("Sum of Values is %d", sum);
+        return 0;
+    }
+</pre>
+<h1>OUTPUT</h1>
+<pre class="output">
+    Enter Value of position 1
+    66
+    Enter Value of position 2
+    44
+    Enter Value of position 3
+    33
+    Enter Value of position 4
+    22
+    Enter Value of position 5
+    11
+    
+    Sum of Values is 176 
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

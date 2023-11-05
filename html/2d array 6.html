@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+     
+     void printArr(int arr[2][2]){
+        int i, j;
+        for (i = 0; i < 2; i++)
+        {
+            for (j = 0; j < 2; j++)
+            {
+                printf("%d\t", arr[i][j]);
+            }
+            printf("\n");        
+        }
+        
+    }
+
+    void scalerMul(int mat[2][2], int num){
+        int i, j;
+        for(i = 0; i < 2; i++)
+        {
+            for (j = 0; j < 2; j++)
+            {
+                mat[i][j] = num * mat[i][j];
+            }
+        }
+    }
+
+    void main(){
+        int arr[2][2], i, j, num;
+        clrscr();
+        for( i = 0; i < 2; i++)
+        {
+            for (j = 0; j < 2; j++)
+            {
+                printf("Enter Value at A[%d,%d]\t", i+1, j+1);
+                scanf("%d", &arr[i][j]);
+            }
+        }
+        printf("Enter Scaler Value to be multiplied\n");
+        scanf("%d", &num);
+        printf("Entered Matrix\n");
+        printArr(arr);
+        scalerMul(arr, num);
+        printf("New Matrix is\n");
+        printArr(arr);
+    }
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+    Enter Value at A[1,1]   5
+    Enter Value at A[1,2]   3                                                       
+    Enter Value at A[2,1]   9                                                       
+    Enter Value at A[2,2]   3                                                       
+    Enter Scaler Value to be multiplied                                             
+    5                                                                               
+    Entered Matrix                                                                  
+    5       3                                                                       
+    9       3                                                                       
+    New Matrix is                                                                   
+    25      15                                                                      
+    45      15   
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

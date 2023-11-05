@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+     
+     void Selectionsort(int arr[], int size){
+        int temp, i, j;
+        for (i = 0; i < size; i++)
+        {
+            for (j = i+1; j < size; j++)
+            {
+                if (arr[i] > arr[j])
+                {
+                    temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+            
+        }
+    }
+    
+    void main(){
+        int arr[5],arr2[5], i;
+        printf("Enter Elements of First Array\n");
+        for (i = 0; i < 5; i++)
+        {
+            printf("Enter Value n %d\n", i+1);
+            scanf("%d", &arr[i]);
+        }
+        printf("Enter Elements of Second Array\n");
+        for (i = 0; i < 5; i++)
+        {
+            printf("Enter Value n %d\n", i+1);
+            scanf("%d", &arr2[i]);
+        }
+        
+        Selectionsort(arr, 5);
+        Selectionsort(arr2, 5);
+    
+        for (i = 0; i < 5; i++)
+        {
+            if (arr[i] != arr2[i])
+            {
+                printf("Both arrays are not same");
+                break;
+            }  
+        }
+        if (i == 10)
+        {
+            printf("Both arrays are same");
+        }
+        
+    
+        return 0;
+    }  
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+    Enter Elements of First Array
+    Enter Value n 1
+    10
+    Enter Value n 2
+    9
+    Enter Value n 3
+    8
+    Enter Value n 4
+    7
+    Enter Value n 5
+    6
+    Enter Elements of Second Array
+    Enter Value n 1
+    1
+    Enter Value n 2
+    2
+    Enter Value n 3
+    3
+    Enter Value n 4
+    4
+    Enter Value n 5
+    5
+    
+    Both arrays are not same 
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

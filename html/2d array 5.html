@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+
+     void display(int mat[2][2]){
+        int i, j;
+        for (i = 0; i < 2; i++)
+        {
+            for (j = 0; j < 2; j++)
+            {
+                printf("%d\t", mat[i][j]);
+            }
+            printf("\n");
+        }
+    }
+
+    int matcpy(int src[2][2], int dest[2][2]){
+        int i, j;
+        for (i = 0; i < 2; i++)
+        {
+            for (j = 0; j < 2; j++)
+            {
+                dest[i][j] = src[i][j];
+            }
+        }
+        return 1;
+    }
+
+    void main(){
+        int mat[2][2], copymat[2][2], i, j;
+        clrscr();
+        for (i = 0; i < 2; i++)
+        {
+            for (j = 0; j < 2; j++)
+            {
+                printf("Enter Value of R%d C%d\t", i+1, j+1);
+                scanf("%d", &mat[i][j]);
+            }
+        }
+        printf("Entered Matrix\n");
+        display(mat);
+        if(matcpy(mat, copymat)){
+            printf("Copied Matrix\n");
+            display(copymat);
+        }
+    }
+
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+    Enter Value of R1 C1    5
+    Enter Value of R1 C2    4                                                       
+    Enter Value of R2 C1    3                                                       
+    Enter Value of R2 C2    6                                                       
+    Entered Matrix                                                                  
+    5       4                                                                       
+    3       6                                                                       
+    Copied Matrix                                                                   
+    5       4                                                                       
+    3       6     
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

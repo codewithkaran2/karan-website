@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+     
+     void sumMatrix(int arr1[2][2], int arr2[2][2], int result[2][2]){
+        int i, j;
+        for (i = 0; i < 2; i++)
+        {
+        for (j = 0; j < 2; j++)
+            {
+                result[i][j] = arr1[i][j] + arr2[i][j];
+            }
+        }
+    }
+
+    void printArr(int arr[2][2]){
+        int i, j;
+        for (i = 0; i < 2; i++)
+        {
+        for (j = 0; j < 2; j++)
+        {
+            printf("%d\t", arr[i][j]);
+        }
+        printf("\n");
+        }
+
+    }
+
+    void main(){
+        int arr1[2][2], arr2[2][2], sum[2][2], i, j;
+        clrscr();
+        for( i = 0; i < 2; i++)
+        {
+        for (j = 0; j < 2; j++)
+        {
+            printf("For First Matrix\n");
+            printf("Enter Value at A[%d,%d]\t", i+1, j+1);
+            scanf("%d", &arr1[i][j]);
+            printf("For Second Matrix\n");
+            printf("Enter Value at B[%d,%d]\t", i+1, j+1);
+            scanf("%d", &arr2[i][j]);
+        }
+        }
+        printf("Matrix 1: \n");
+        printArr(arr1);
+        printf("Matrix 2: \n");
+        printArr(arr2);
+        sumMatrix(arr1, arr2, sum);
+        printf("Sum of these Two matrix is \n");
+        printArr(sum);
+    }
+        
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+    For First Matrix
+    Enter Value at A[1,1]   32
+    For Second Matrix
+    Enter Value at B[1,1]   3
+    For First Matrix
+    Enter Value at A[1,2]   3                                                       
+    For Second Matrix                                                               
+    Enter Value at B[1,2]   27                                                      
+    For First Matrix                                                                
+    Enter Value at A[2,1]   27                                                      
+    For Second Matrix                                                               
+    Enter Value at B[2,1]   37                                                      
+    For First Matrix                                                                
+    Enter Value at A[2,2]   17                                                      
+    For Second Matrix                                                               
+    Enter Value at B[2,2]   36      
+
+    Matrix 1:                                                                       
+    32      3                                                                       
+    27      17                                                                      
+    Matrix 2:                                                                       
+    3       27                                                                      
+    37      36        
+
+    Sum of these Two matrix is                                                      
+    35      30                                                                      
+    64      53                        
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

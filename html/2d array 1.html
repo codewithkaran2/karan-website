@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1>    </h1>
+<pre class="input">
+    
+     #include&#60;stdio.h&#62;
+     #include&#60;conio.h&#62;
+     
+     void display(int mat[4][2]){
+        int i, j;
+        for (i = 0; i < 4; i++)
+        {
+            for (j = 0; j < 2; j++)
+            {
+                printf("%d\t", mat[i][j]);
+            }
+            printf("\n");
+        }
+    }
+
+    void main(){
+        int mat[4][2], i, j;
+        clrscr();
+        for (i = 0; i < 4; i++)
+        {
+            for (j = 0; j < 2; j++)
+            {
+                printf("Enter Row %d Column %d Value:\t", i+1, j+1);
+                scanf("%d", &mat[i][j]);
+            }
+        }
+    }
+       
+
+</pre>
+<h1>OUTPUT</h1>
+
+<pre class="output">
+    Enter Row 1 Column 1 Value:     63
+    Enter Row 1 Column 2 Value:     28                                              
+    Enter Row 2 Column 1 Value:     48                                              
+    Enter Row 2 Column 2 Value:     28                                              
+    Enter Row 3 Column 1 Value:     58
+    Enter Row 3 Column 2 Value:     18                                              
+    Enter Row 4 Column 1 Value:     38                                              
+    Enter Row 4 Column 2 Value:     85                                              
+    63      28                                                                      
+    48      28                                                                      
+    58      18                                                                      
+    38      85    
+</pre>
+
+</div>
+
+
+</body>
+
+</html>

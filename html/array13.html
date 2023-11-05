@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time2Code</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="second">
+
+     <h1> </h1>
+
+<pre class="input">
+    
+    #include&#60;stdio.h&#62;
+    #include&#60;conio.h&#62;
+ 
+    void sort(int arr[], int size){
+        int i, j;
+        for (i = 0; i < size; i++){
+            for (j = i+1; j < size; j++){
+                if (arr[i] > arr[j]){
+                    int temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+    }
+    void main(){
+        int arr[5], i, j, avail = 0;
+        for (i = 0; i < 5; i++)
+        {
+            printf("Enter Value %d\n", i+1);
+            scanf("%d", &arr[i]);
+        }
+        sort(arr, 5);
+        printf("Duplicate Values Are\n");
+        for (i = 0; i < 5; i++)
+        {
+            int count = 1;
+            while (arr[i] ==  arr[i+1]){
+                count++;
+                i++;
+                avail = 1;
+            }
+            if (count > 1){
+               printf("%d is present %d times\n", arr[i], count);
+            }
+            
+        }
+        
+        if (!avail)
+        {
+            printf("No Duplicate Value Found");
+        }
+        return 0;
+    }
+</pre>
+<h1>OUTPUT</h1>
+<pre class="output">
+    Enter Value 1
+    2
+    Enter Value 2
+    90
+    Enter Value 3
+    76
+    Enter Value 4
+    34
+    Enter Value 5
+    2
+
+    Duplicate Values Are
+    2 is present 2 times
+</pre>
+
+</div>
+
+
+</body>
+
+</html>
